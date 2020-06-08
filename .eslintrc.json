@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["plugin:prettier/recommended", "eslint:recommended"],
+  "plugins": ["react"],
+  "rules": {
+    "react/prop-types": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1
+  },
+  "env": {
+    "node": true,
+    "jest": true
+  }
+}

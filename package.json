@@ -11,8 +11,17 @@
     ]
   },
   "scripts": {
-    "dev": "cd playground && yarn storybook"
+    "storybook": "cd playground && yarn storybook",
+    "dev": "cd lib && yarn dev"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "prettier": "^2.0.5"
+  }
 }
