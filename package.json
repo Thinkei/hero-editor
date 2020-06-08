@@ -1,0 +1,18 @@
+{
+  "name": "hero-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "lib",
+      "playground"
+    ]
+  },
+  "scripts": {
+    "dev": "cd playground && yarn storybook"
+  },
+  "author": "",
+  "license": "ISC"
+}
