@@ -1,14 +1,7 @@
 import React from 'react';
-import { Button } from '@storybook/react/demo';
+import Greeting from 'hero-editor';
 
-export default { title: 'Button' };
+export default { title: 'Hero Editor' };
 
-export const withText = () => <Button>Hello Button</Button>;
+export const interactive = () => <Greeting />;
 
-export const withEmoji = () => (
-  <Button>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
-);
