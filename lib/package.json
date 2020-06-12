@@ -5,7 +5,8 @@
   "main": "dist/lib.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "dev": "webpack --config webpack.config.js --watch"
+    "dev": "webpack --config webpack.dev.config.js --watch",
+    "dev:mobile": "webpack --config webpack.mobile.config.js --watch"
   },
   "author": "",
   "license": "ISC",

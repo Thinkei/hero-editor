@@ -12,7 +12,8 @@
   },
   "scripts": {
     "storybook": "cd playground && yarn storybook",
-    "dev": "cd lib && yarn dev"
+    "dev": "cd lib && yarn dev",
+    "dev:mobile": "cd lib && yarn dev:mobile"
   },
   "author": "",
   "license": "ISC",
