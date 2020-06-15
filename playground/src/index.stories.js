@@ -1,10 +1,16 @@
 import React, { useState, useMemo } from 'react';
-import HeroEditor, { JsonViewer, bold, italic, underline } from 'hero-editor';
+import HeroEditor, {
+  JsonViewer,
+  bold,
+  italic,
+  underline,
+  logger,
+} from 'hero-editor';
 
 export default { title: 'Hero Editor' };
 
 export const interactive = () => {
-  const plugins = useMemo(() => [bold, italic, underline], []);
+  const plugins = useMemo(() => [logger, bold, italic, underline], []);
   const [value, setValue] = useState([
     {
       type: 'paragraph',
