@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "dev": "webpack --config webpack.dev.config.js --watch",
-    "dev:mobile": "webpack --config webpack.mobile.config.js --watch"
+    "dev:mobile": "webpack --config webpack.mobile.config.js --watch",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +15,10 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "@testing-library/react": "^10.2.1",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
+    "jest": "^26.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "webpack": "^4.43.0",
