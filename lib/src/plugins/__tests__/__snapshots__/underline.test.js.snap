@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`plugin bold renders strong element 1`] = `
+exports[`plugin underline renders u element 1`] = `
 <body>
   <div>
     <span>
-      <strong>
-        Bold text
-      </strong>
+      <u>
+        Underlined text
+      </u>
     </span>
   </div>
 </body>

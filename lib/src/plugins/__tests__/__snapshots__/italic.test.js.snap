@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`plugin bold renders strong element 1`] = `
+exports[`plugin italic renders em element 1`] = `
 <body>
   <div>
     <span>
-      <strong>
-        Bold text
-      </strong>
+      <em>
+        Italic text
+      </em>
     </span>
   </div>
 </body>
