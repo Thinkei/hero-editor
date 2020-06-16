@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`composeRenderLeaf renders nested leaf nodes in correct order 1`] = `
+<body>
+  <div>
+    <span>
+      <u>
+        <em>
+          <strong>
+            Rich text
+          </strong>
+        </em>
+      </u>
+    </span>
+  </div>
+</body>
+`;
