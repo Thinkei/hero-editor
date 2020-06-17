@@ -12,9 +12,10 @@ Significant changes compared to eh-rich-text-editor
 - [x] bold
 - [x] italic
 - [x] underline
-- [ ] ordered list
-- [ ] unordered list
+- [x] bulleted list
+- [x] numbered list
 - [ ] heading
 - [ ] table
 - [ ] link
 - [ ] mention/placeholder
+

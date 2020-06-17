@@ -5,6 +5,9 @@ import HeroEditor, {
   italic,
   underline,
   logger,
+  listItem,
+  bulletedList,
+  numberedList,
 } from 'hero-editor';
 
 const Button = (props) => (
@@ -21,28 +24,94 @@ const Button = (props) => (
   />
 );
 
+const defaultValue = [
+  {
+    type: 'paragraph',
+    children: [
+      {
+        text: 'A',
+        bold: true,
+        underline: true,
+      },
+      {
+        text: ' ',
+        underline: true,
+      },
+      {
+        text: 'paragraph',
+        italic: true,
+        underline: true,
+      },
+    ],
+  },
+  {
+    type: 'paragraph',
+    children: [
+      {
+        text: '',
+      },
+    ],
+  },
+  {
+    type: 'bulleted-list',
+    children: [
+      {
+        type: 'list-item',
+        children: [
+          {
+            text: 'Item 1',
+          },
+        ],
+      },
+      {
+        type: 'list-item',
+        children: [
+          {
+            text: 'Item 2',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: 'numbered-list',
+    children: [
+      {
+        type: 'list-item',
+        children: [
+          {
+            text: 'Item 1',
+          },
+        ],
+      },
+      {
+        type: 'list-item',
+        children: [
+          {
+            text: 'Item 2',
+          },
+        ],
+      },
+    ],
+  },
+];
+
 export default { title: 'Hero Editor' };
 
 export const interactive = () => {
-  const plugins = useMemo(() => [logger, bold, italic, underline], []);
-  const [value, setValue] = useState([
-    {
-      type: 'paragraph',
-      children: [{ text: 'A line of text in a paragraph.' }],
-    },
-    {
-      type: 'paragraph',
-      children: [
-        { text: 'This is editable ' },
-        { text: 'rich', bold: true },
-        { text: ' text, ' },
-        { text: 'much', italic: true },
-        { text: ' better than a ' },
-        { text: '<textarea>', underline: true },
-        { text: '!' },
-      ],
-    },
-  ]);
+  const plugins = useMemo(
+    () => [
+      logger,
+      bold,
+      italic,
+      underline,
+      bulletedList,
+      numberedList,
+      listItem,
+    ],
+    [],
+  );
+  const [value, setValue] = useState(defaultValue);
 
   return (
     <div>
@@ -57,25 +126,19 @@ export const interactive = () => {
 };
 
 export const webview = () => {
-  const plugins = useMemo(() => [logger, bold, italic, underline], []);
-  const [value, setValue] = useState([
-    {
-      type: 'paragraph',
-      children: [{ text: 'A line of text in a paragraph.' }],
-    },
-    {
-      type: 'paragraph',
-      children: [
-        { text: 'This is editable ' },
-        { text: 'rich', bold: true },
-        { text: ' text, ' },
-        { text: 'much', italic: true },
-        { text: ' better than a ' },
-        { text: '<textarea>', underline: true },
-        { text: '!' },
-      ],
-    },
-  ]);
+  const plugins = useMemo(
+    () => [
+      logger,
+      bold,
+      italic,
+      underline,
+      bulletedList,
+      numberedList,
+      listItem,
+    ],
+    [],
+  );
+  const [value, setValue] = useState(defaultValue);
 
   return (
     <div>
