@@ -118,6 +118,7 @@ export const interactive = () => {
   return (
     <div>
       <HeroEditor
+        id="interactive"
         plugins={plugins}
         value={value}
         onChange={(newValue) => setValue(newValue)}
@@ -145,6 +146,7 @@ export const webview = () => {
   return (
     <div>
       <HeroEditor
+        id="webview"
         showToolbar={false}
         plugins={plugins}
         value={value}
@@ -155,7 +157,7 @@ export const webview = () => {
         onMouseDown={(event) => {
           event.preventDefault();
           window.postMessage({
-            type: '@hero-editor/bold',
+            type: '@hero-editor/webview/bold',
           });
         }}
       >
@@ -165,7 +167,7 @@ export const webview = () => {
         onMouseDown={(event) => {
           event.preventDefault();
           window.postMessage({
-            type: '@hero-editor/italic',
+            type: '@hero-editor/webview/italic',
           });
         }}
       >
@@ -175,7 +177,7 @@ export const webview = () => {
         onMouseDown={(event) => {
           event.preventDefault();
           window.postMessage({
-            type: '@hero-editor/underline',
+            type: '@hero-editor/webview/underline',
           });
         }}
       >
