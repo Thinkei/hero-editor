@@ -8,6 +8,7 @@ import HeroEditor, {
   listItem,
   bulletedList,
   numberedList,
+  mention,
 } from 'hero-editor';
 
 const Button = (props) => (
@@ -108,6 +109,7 @@ export const interactive = () => {
       bulletedList,
       numberedList,
       listItem,
+      mention({ renderMentionList: (search) => <h1>{search}</h1> }),
     ],
     [],
   );
