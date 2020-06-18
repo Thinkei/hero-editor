@@ -174,6 +174,26 @@ const defaultValue = [
     type: 'paragraph',
     children: [
       {
+        text: 'This is a mention ',
+      },
+      {
+        type: 'mention',
+        data: {
+          id: 1,
+          name: 'Toan Nguyen',
+        },
+        children: [
+          {
+            text: 'Toan Nguyen',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: 'paragraph',
+    children: [
+      {
         text: '',
       },
     ],
