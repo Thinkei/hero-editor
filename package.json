@@ -11,9 +11,12 @@
     ]
   },
   "scripts": {
-    "storybook": "cd playground && yarn storybook",
-    "dev": "cd lib && yarn dev",
-    "dev:mobile": "cd lib && yarn dev:mobile"
+    "lib": "yarn workspace hero-editor",
+    "playground": "yarn workspace @hero-editor/playground",
+    "storybook": "yarn playground storybook",
+    "test": "yarn lib test",
+    "dev": "yarn lib dev",
+    "dev:mobile": "yarn lib dev:mobile"
   },
   "author": "",
   "license": "ISC",
