@@ -24,22 +24,27 @@ export const interactive = () => {
       numberedList,
       listItem,
       mention({
-        renderMentionList: (search, onSelect) => (
-          <div
-            style={{
-              background: 'white',
-              boxShadow: '0px 4px 8px rgba(0,0,0,.2)',
-              border: 'solid thin #eee',
-              borderRadius: 4,
-            }}
-          >
-            <div>Your search: {search}</div>
-            {sampleMentions
-              .filter(({ name }) => name.toLowerCase().includes(search))
-              .map(({ id, name }) => (
+        renderMentionList: (search, onSelect) => {
+          const results = sampleMentions.filter(({ name }) =>
+            name.toLowerCase().includes(search.toLowerCase()),
+          );
+
+          if (!results.length)
+            return (
+              <div style={styles.list}>
+                <div style={{ ...styles.listItem, textAlign: 'center' }}>
+                  No result
+                </div>
+              </div>
+            );
+
+          return (
+            <div style={styles.list}>
+              {results.map(({ id, name }) => (
                 <div
                   key={id}
-                  onClick={(e) => {
+                  style={styles.listItem}
+                  onMouseDown={(e) => {
                     e.preventDefault();
                     onSelect({ id, name });
                   }}
@@ -47,8 +52,9 @@ export const interactive = () => {
                   {name}
                 </div>
               ))}
-          </div>
-        ),
+            </div>
+          );
+        },
       }),
     ],
     [],
@@ -135,6 +141,20 @@ const sampleMentions = [
   { id: 5, name: 'Minh Dinh' },
   { id: 6, name: 'Tan Nguyen' },
 ];
+
+const styles = {
+  list: {
+    border: 'solid thin #eaeaea',
+    background: 'white',
+    boxShadow: '0px 2px 8px rgba(0,0,0,.2)',
+    borderRadius: 4,
+  },
+  listItem: {
+    minWidth: 150,
+    padding: '8px 12px',
+    cursor: 'pointer',
+  },
+};
 
 const Button = (props) => (
   <button
