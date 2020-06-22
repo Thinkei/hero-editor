@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/honey-pot_1f36f.png">
+</p>
+
 <h1 align="center">
   Hero Editor
 </h1>
@@ -9,12 +13,18 @@
   <img src="https://img.shields.io/badge/yarn-1.22.4-blue">
 </p>
 
-Significant changes compared to eh-rich-text-editor
+Hero editor is a WYSIWYG built on top of Slate (v0.58.3). It's designed for mobile-first, hence all of the communications from plugins to the editor must go through message channel. This package also includes serializers and renderers for the Slate content.
 
-- Slate v0.58.3
-- Pub/sub pattern for react native compatibility
-- Have tests 🤣
-- Include all serializers and React renderer
+## Development
+
+- Start bundler
+```
+yarn dev
+```
+- Start playground
+```
+yarn storybook
+```
 
 ## Plugins
 
