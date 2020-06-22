@@ -13,10 +13,11 @@
   "scripts": {
     "lib": "yarn workspace hero-editor",
     "playground": "yarn workspace @hero-editor/playground",
-    "storybook": "yarn playground storybook",
+    "storybook": "yarn playground start",
     "dev": "yarn lib dev",
     "build": "yarn lib build",
-    "test": "yarn lib test"
+    "test": "yarn lib test",
+    "version": "yarn version --cwd lib"
   },
   "author": "",
   "license": "ISC",
