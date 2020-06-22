@@ -14,9 +14,9 @@
     "lib": "yarn workspace hero-editor",
     "playground": "yarn workspace @hero-editor/playground",
     "storybook": "yarn playground storybook",
-    "test": "yarn lib test",
     "dev": "yarn lib dev",
-    "dev:mobile": "yarn lib dev:mobile"
+    "build": "yarn lib build",
+    "test": "yarn lib test"
   },
   "author": "",
   "license": "ISC",

@@ -4,9 +4,10 @@
   "description": "",
   "main": "dist/lib.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "dev": "webpack --config webpack.dev.config.js --watch",
-    "dev:mobile": "webpack --config webpack.mobile.config.js --watch",
+    "build:lib": "webpack --config webpack.lib.js",
+    "build:app": "webpack --config webpack.app.js",
+    "dev": "webpack --config webpack.dev.js --watch",
+    "build": "yarn build:lib && yarn build:app",
     "test": "jest"
   },
   "author": "",
