@@ -17,7 +17,7 @@
     "dev": "yarn lib dev",
     "build": "yarn lib build",
     "test": "yarn lib test",
-    "version": "yarn version --cwd lib"
+    "bump": "yarn version --cwd lib"
   },
   "author": "",
   "license": "ISC",
