@@ -30,8 +30,7 @@ jobs:
       with:
         node-version: 10.16
         registry-url: https://registry.npmjs.org/
-    - run: cd lib
-    - run: npm publish
+    - run: cd lib && npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
