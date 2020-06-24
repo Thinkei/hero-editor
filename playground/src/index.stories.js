@@ -66,6 +66,7 @@ export const interactive = () => {
       <HeroEditor
         id="interactive"
         plugins={plugins}
+        placeholder="Enter some rich text..."
         value={value}
         onChange={(newValue) => setValue(newValue)}
       ></HeroEditor>
@@ -204,7 +205,7 @@ const defaultValue = [
         },
         children: [
           {
-            text: 'Toan Nguyen',
+            text: '',
           },
         ],
       },
