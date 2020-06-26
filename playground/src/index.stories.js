@@ -9,6 +9,7 @@ import HeroEditor, {
   bulletedList,
   numberedList,
   mention,
+  editorPlaceholder,
 } from 'hero-editor';
 
 export default { title: 'Hero Editor' };
@@ -56,6 +57,10 @@ export const interactive = () => {
           );
         },
       }),
+      editorPlaceholder({
+        value:
+          'Has someone brightened up your day? Type @ to give them a Shout Out!',
+      }),
     ],
     [],
   );
@@ -66,7 +71,6 @@ export const interactive = () => {
       <HeroEditor
         id="interactive"
         plugins={plugins}
-        placeholder="Enter some rich text..."
         value={value}
         onChange={(newValue) => setValue(newValue)}
       ></HeroEditor>
