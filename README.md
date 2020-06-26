@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/honey-pot_1f36f.png">
+  <img src="./images/pancakes.png">
 </p>
 
 <h1 align="center">
@@ -26,6 +26,87 @@ yarn dev
 yarn storybook
 ```
 
+## Usage
+
+```javascript
+import HeroEditor, {
+  JsonViewer,
+  bold,
+  italic,
+  underline,
+  logger,
+  listItem,
+  bulletedList,
+  numberedList,
+  mention,
+  editorPlaceholder,
+} from 'hero-editor';
+
+const App = () => {
+  const plugins = useMemo(
+    () => [
+      logger,
+      bold,
+      italic,
+      underline,
+      bulletedList,
+      numberedList,
+      listItem,
+      mention({
+        renderMentionList: (search, onSelect) => {
+          const results = sampleMentions.filter(({ name }) =>
+            name.toLowerCase().includes(search.toLowerCase()),
+          );
+
+          if (!results.length)
+            return (
+              <div style={styles.list}>
+                <div style={{ ...styles.listItem, textAlign: 'center' }}>
+                  No result
+                </div>
+              </div>
+            );
+
+          return (
+            <div style={styles.list}>
+              {results.map(({ id, name }) => (
+                <div
+                  key={id}
+                  style={styles.listItem}
+                  onMouseDown={(e) => {
+                    e.preventDefault();
+                    onSelect({ id, name });
+                  }}
+                >
+                  {name}
+                </div>
+              ))}
+            </div>
+          );
+        },
+      }),
+      editorPlaceholder({
+        value:
+          'Has someone brightened up your day? Type @ to give them a Shout Out!',
+      }),
+    ],
+    [],
+  );
+  const [value, setValue] = useState(defaultValue);
+
+  return (
+    <div>
+      <HeroEditor
+        id="interactive"
+        plugins={plugins}
+        value={value}
+        onChange={(newValue) => setValue(newValue)}
+      ></HeroEditor>
+    </div>
+  );
+};
+```
+
 ## Plugins
 
 - [x] bold
@@ -34,6 +115,7 @@ yarn storybook
 - [x] bulleted list
 - [x] numbered list
 - [x] mention/placeholder
+- [x] editor placeholder
 - [ ] heading
 - [ ] table
 - [ ] link

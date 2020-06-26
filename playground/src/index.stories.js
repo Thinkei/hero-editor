@@ -9,6 +9,7 @@ import HeroEditor, {
   bulletedList,
   numberedList,
   mention,
+  editorPlaceholder,
 } from 'hero-editor';
 
 export default { title: 'Hero Editor' };
@@ -55,6 +56,10 @@ export const interactive = () => {
             </div>
           );
         },
+      }),
+      editorPlaceholder({
+        value:
+          'Has someone brightened up your day? Type @ to give them a Shout Out!',
       }),
     ],
     [],
@@ -204,7 +209,7 @@ const defaultValue = [
         },
         children: [
           {
-            text: 'Toan Nguyen',
+            text: '',
           },
         ],
       },
