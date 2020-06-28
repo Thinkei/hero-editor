@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`plugin bulleted list renders ul element 1`] = `
+<body>
+  <div>
+    <ul>
+      Bulleted list
+    </ul>
+  </div>
+</body>
+`;
