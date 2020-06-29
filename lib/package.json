@@ -1,6 +1,6 @@
 {
   "name": "hero-editor",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/lib.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build:app": "webpack --config webpack.app.js",
     "dev": "webpack --config webpack.dev.js --watch",
     "build": "yarn build:lib && yarn build:app",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +17,13 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "@testing-library/react": "^10.2.1",
+    "@testing-library/react-hooks": "^3.3.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "jest": "^26.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },

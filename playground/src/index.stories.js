@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import HeroEditor, {
   JsonViewer,
   bold,
@@ -14,57 +14,55 @@ import HeroEditor, {
 
 export default { title: 'Hero Editor' };
 
-export const interactive = () => {
-  const plugins = useMemo(
-    () => [
-      logger,
-      bold,
-      italic,
-      underline,
-      bulletedList,
-      numberedList,
-      listItem,
-      mention({
-        renderMentionList: (search, onSelect) => {
-          const results = sampleMentions.filter(({ name }) =>
-            name.toLowerCase().includes(search.toLowerCase()),
-          );
+const plugins = [
+  logger(),
+  bold(),
+  italic(),
+  underline(),
+  bulletedList(),
+  numberedList(),
+  listItem(),
+  mention({
+    renderMentionList: (search, onSelect) => {
+      const results = sampleMentions.filter(({ name }) =>
+        name.toLowerCase().includes(search.toLowerCase()),
+      );
 
-          if (!results.length)
-            return (
-              <div style={styles.list}>
-                <div style={{ ...styles.listItem, textAlign: 'center' }}>
-                  No result
-                </div>
-              </div>
-            );
-
-          return (
-            <div style={styles.list}>
-              {results.map(({ id, name }) => (
-                <div
-                  key={id}
-                  style={styles.listItem}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
-                    onSelect({ id, name });
-                  }}
-                >
-                  {name}
-                </div>
-              ))}
+      if (!results.length)
+        return (
+          <div style={styles.list}>
+            <div style={{ ...styles.listItem, textAlign: 'center' }}>
+              No result
             </div>
-          );
-        },
-      }),
-      editorPlaceholder({
-        value:
-          'Has someone brightened up your day? Type @ to give them a Shout Out!',
-      }),
-    ],
-    [],
-  );
-  const [value, setValue] = useState(defaultValue);
+          </div>
+        );
+
+      return (
+        <div style={styles.list}>
+          {results.map(({ id, name }) => (
+            <div
+              key={id}
+              style={styles.listItem}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                onSelect({ id, name });
+              }}
+            >
+              {name}
+            </div>
+          ))}
+        </div>
+      );
+    },
+  }),
+  editorPlaceholder({
+    value:
+      'Has someone brightened up your day? Type @ to give them a Shout Out!',
+  }),
+];
+
+export const interactive = () => {
+  const [value, setValue] = useState(emptyValue);
 
   return (
     <div>
@@ -80,18 +78,6 @@ export const interactive = () => {
 };
 
 export const webview = () => {
-  const plugins = useMemo(
-    () => [
-      logger,
-      bold,
-      italic,
-      underline,
-      bulletedList,
-      numberedList,
-      listItem,
-    ],
-    [],
-  );
   const [value, setValue] = useState(defaultValue);
 
   return (
@@ -174,6 +160,17 @@ const Button = (props) => (
     }}
   />
 );
+
+const emptyValue = [
+  {
+    type: 'paragraph',
+    children: [
+      {
+        text: '',
+      },
+    ],
+  },
+];
 
 const defaultValue = [
   {
