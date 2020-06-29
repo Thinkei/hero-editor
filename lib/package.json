@@ -8,7 +8,7 @@
     "build:app": "webpack --config webpack.app.js",
     "dev": "webpack --config webpack.dev.js --watch",
     "build": "yarn build:lib && yarn build:app",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "author": "",
   "license": "ISC",
