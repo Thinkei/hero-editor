@@ -64,7 +64,7 @@ export const interactive = () => {
     ],
     [],
   );
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = useState(emptyValue);
 
   return (
     <div>
@@ -174,6 +174,17 @@ const Button = (props) => (
     }}
   />
 );
+
+const emptyValue = [
+  {
+    type: 'paragraph',
+    children: [
+      {
+        text: '',
+      },
+    ],
+  },
+];
 
 const defaultValue = [
   {
