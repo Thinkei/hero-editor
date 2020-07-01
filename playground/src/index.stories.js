@@ -71,6 +71,7 @@ export const interactive = () => {
         plugins={plugins}
         value={value}
         onChange={(newValue) => setValue(newValue)}
+        autoFocus
       ></HeroEditor>
       <JsonViewer value={value} />
     </div>
