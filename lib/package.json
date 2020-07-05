@@ -28,6 +28,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "is-url": "^1.2.4",
     "slate": "^0.58.3",
     "slate-react": "^0.58.3"
   },

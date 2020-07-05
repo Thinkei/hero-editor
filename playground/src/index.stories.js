@@ -10,12 +10,14 @@ import HeroEditor, {
   numberedList,
   mention,
   editorPlaceholder,
+  link,
 } from 'hero-editor';
 
 export default { title: 'Hero Editor' };
 
 const plugins = [
   logger(),
+  link(),
   bold(),
   italic(),
   underline(),
@@ -72,6 +74,7 @@ export const interactive = () => {
         value={value}
         onChange={(newValue) => setValue(newValue)}
         autoFocus
+        editableStyle={{ minHeight: 200 }}
       ></HeroEditor>
       <JsonViewer value={value} />
     </div>
