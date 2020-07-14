@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reactTransformer works properly 1`] = `
+<body>
+  <div>
+    <p
+      style="margin: 0px; line-height: 1.5; min-height: 1.5em;"
+    >
+      <span>
+        <u>
+          <strong>
+            A
+          </strong>
+        </u>
+      </span>
+      <span>
+        <u>
+           
+        </u>
+      </span>
+      <span>
+        <u>
+          <em>
+            paragraph
+          </em>
+        </u>
+      </span>
+    </p>
+    <p
+      style="margin: 0px; line-height: 1.5; min-height: 1.5em;"
+    >
+      <span>
+        This is a mention 
+      </span>
+      <span
+        style="padding: 2px 4px; background: rgb(238, 238, 238); border-radius: 4px;"
+      >
+        @
+        Toan Nguyen
+      </span>
+    </p>
+    <p
+      style="margin: 0px; line-height: 1.5; min-height: 1.5em;"
+    >
+      <span />
+    </p>
+    <ul>
+      <li>
+        <span>
+          Item 1
+        </span>
+      </li>
+      <li>
+        <span>
+          Item 2
+        </span>
+      </li>
+    </ul>
+    <ol>
+      <li>
+        <span>
+          Item 1
+        </span>
+      </li>
+      <li>
+        <span>
+          Item 2
+        </span>
+      </li>
+    </ol>
+  </div>
+</body>
+`;
