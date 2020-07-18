@@ -119,3 +119,11 @@ const App = () => {
 - [ ] heading
 - [ ] table
 - [ ] link
+
+## Serializers
+
+- [ ] plain text
+
+## Transformers
+
+- [x] react (convert Slate-compatible JSON to virtual DOM)
