@@ -5,6 +5,7 @@ import HeroEditor, {
   italic,
   underline,
   logger,
+  cursorTracker,
   listItem,
   bulletedList,
   numberedList,
@@ -17,6 +18,7 @@ export default { title: 'Hero Editor' };
 
 const plugins = [
   logger(),
+  cursorTracker(),
   link(),
   bold(),
   italic(),
