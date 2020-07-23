@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`plugin h1 renders strong element 1`] = `
+<body>
+  <div>
+    <span>
+      <h1>
+        Heading 1
+      </h1>
+    </span>
+  </div>
+</body>
+`;
