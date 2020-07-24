@@ -128,6 +128,16 @@ export const webview = () => {
       >
         underline
       </Button>
+      <Button
+        onMouseDown={(event) => {
+          event.preventDefault();
+          window.postMessage({
+            type: '@hero-editor/webview/h1',
+          });
+        }}
+      >
+        Heading 1
+      </Button>
     </div>
   );
 };
@@ -181,6 +191,15 @@ const emptyValue = [
 ];
 
 const defaultValue = [
+  {
+    type: 'heading',
+    children: [
+      {
+        text: 'This is Heading 1',
+        h1: true,
+      },
+    ],
+  },
   {
     type: 'paragraph',
     children: [
