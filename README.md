@@ -116,13 +116,13 @@ const App = () => {
 - [x] numbered list
 - [x] mention/placeholder
 - [x] editor placeholder
-- [ ] heading
+- [x] heading
 - [ ] table
-- [ ] link
+- [x] link
 
 ## Serializers
 
-- [ ] plain text
+- [x] plain text
 
 ## Transformers
 
