@@ -17,6 +17,14 @@ export const react = () => (
 
 const value = [
   {
+    type: 'heading-one',
+    children: [
+      {
+        text: 'Hero Editor',
+      },
+    ],
+  },
+  {
     type: 'paragraph',
     children: [
       {
