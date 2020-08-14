@@ -12,6 +12,7 @@ import HeroEditor, {
   mention,
   editorPlaceholder,
   link,
+  headingOne,
 } from 'hero-editor';
 
 export default { title: 'Hero Editor' };
@@ -26,6 +27,7 @@ const plugins = [
   bulletedList(),
   numberedList(),
   listItem(),
+  headingOne(),
   mention({
     renderMentionList: (search, onSelect) => {
       const results = sampleMentions.filter(({ name }) =>
@@ -179,6 +181,14 @@ const emptyValue = [
 ];
 
 const defaultValue = [
+  {
+    type: 'heading-one',
+    children: [
+      {
+        text: 'Hero Editor',
+      },
+    ],
+  },
   {
     type: 'paragraph',
     children: [
