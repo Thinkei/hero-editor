@@ -12,7 +12,7 @@ import HeroEditor, {
   mention,
   editorPlaceholder,
   link,
-  h1,
+  headingOne,
 } from 'hero-editor';
 
 export default { title: 'Hero Editor' };
@@ -27,7 +27,7 @@ const plugins = [
   bulletedList(),
   numberedList(),
   listItem(),
-  h1(),
+  headingOne(),
   mention({
     renderMentionList: (search, onSelect) => {
       const results = sampleMentions.filter(({ name }) =>
@@ -128,16 +128,6 @@ export const webview = () => {
       >
         underline
       </Button>
-      <Button
-        onMouseDown={(event) => {
-          event.preventDefault();
-          window.postMessage({
-            type: '@hero-editor/webview/h1',
-          });
-        }}
-      >
-        Heading 1
-      </Button>
     </div>
   );
 };
@@ -192,11 +182,10 @@ const emptyValue = [
 
 const defaultValue = [
   {
-    type: 'heading',
+    type: 'heading-one',
     children: [
       {
-        text: 'This is Heading 1',
-        h1: true,
+        text: 'Hero Editor',
       },
     ],
   },
