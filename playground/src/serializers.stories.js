@@ -25,6 +25,14 @@ const value = [
     ],
   },
   {
+    type: 'heading-two',
+    children: [
+      {
+        text: 'Hero Editor description',
+      },
+    ],
+  },
+  {
     type: 'paragraph',
     children: [
       {

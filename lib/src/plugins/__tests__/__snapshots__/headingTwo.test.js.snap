@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`headingTwo plugin renders h1 element 1`] = `
+<body>
+  <div>
+    <p
+      style="margin: 0px; line-height: 1.5;"
+    >
+      Heading Two
+    </p>
+  </div>
+</body>
+`;
