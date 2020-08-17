@@ -195,7 +195,7 @@ const defaultValue = [
     type: 'heading-two',
     children: [
       {
-        text: 'Hero Editor description',
+        text: 'This is heading 2',
       },
     ],
   },
