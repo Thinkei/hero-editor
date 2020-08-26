@@ -25,6 +25,14 @@ const value = [
     ],
   },
   {
+    type: 'heading-two',
+    children: [
+      {
+        text: 'The Slate-based WYSIWYG editor',
+      },
+    ],
+  },
+  {
     type: 'paragraph',
     children: [
       {
