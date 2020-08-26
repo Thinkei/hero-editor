@@ -28,7 +28,7 @@ const value = [
     type: 'heading-two',
     children: [
       {
-        text: 'This is heading 2',
+        text: 'The Slate-based WYSIWYG editor',
       },
     ],
   },
