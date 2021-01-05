@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`headingTwo plugin renders h2 element 1`] = `
+<body>
+  <div>
+    <h2>
+      Heading two
+    </h2>
+  </div>
+</body>
+`;

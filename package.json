@@ -10,6 +10,9 @@
       "playground"
     ]
   },
+  "resolutions": {
+    "prismjs": "^1.21.0"
+  },
   "scripts": {
     "lib": "yarn workspace hero-editor",
     "playground": "yarn workspace @hero-editor/playground",

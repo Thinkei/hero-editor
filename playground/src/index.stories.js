@@ -13,6 +13,7 @@ import HeroEditor, {
   editorPlaceholder,
   link,
   headingOne,
+  headingTwo,
 } from 'hero-editor';
 
 export default { title: 'Hero Editor' };
@@ -28,6 +29,7 @@ const plugins = [
   numberedList(),
   listItem(),
   headingOne(),
+  headingTwo(),
   mention({
     renderMentionList: (search, onSelect) => {
       const results = sampleMentions.filter(({ name }) =>
@@ -51,7 +53,10 @@ const plugins = [
               style={styles.listItem}
               onMouseDown={(e) => {
                 e.preventDefault();
-                onSelect({ id, name });
+
+                const style = id === 1 ? { color: 'red' } : undefined;
+
+                onSelect({ id, name, style });
               }}
             >
               {name}
@@ -186,6 +191,14 @@ const defaultValue = [
     children: [
       {
         text: 'Hero Editor',
+      },
+    ],
+  },
+  {
+    type: 'heading-two',
+    children: [
+      {
+        text: 'The Slate-based WYSIWYG editor',
       },
     ],
   },
