@@ -53,7 +53,10 @@ const plugins = [
               style={styles.listItem}
               onMouseDown={(e) => {
                 e.preventDefault();
-                onSelect({ id, name });
+
+                const style = id === 1 ? { color: 'red' } : undefined;
+
+                onSelect({ id, name, style });
               }}
             >
               {name}
