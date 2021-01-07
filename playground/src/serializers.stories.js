@@ -101,6 +101,25 @@ const value = [
     type: 'paragraph',
     children: [
       {
+        text: 'This is an invalid link ',
+      },
+      {
+        type: 'link',
+        data: {
+          url: 'https://google.com',
+        },
+        children: [
+          {
+            text: 'www.google.com',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: 'paragraph',
+    children: [
+      {
         text: '',
       },
     ],
