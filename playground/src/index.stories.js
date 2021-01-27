@@ -14,6 +14,8 @@ import HeroEditor, {
   link,
   headingOne,
   headingTwo,
+  editorResetter,
+  EMPTY_VALUE,
 } from 'hero-editor';
 
 export default { title: 'Hero Editor' };
@@ -70,10 +72,11 @@ const plugins = [
     value:
       'Has someone brightened up your day? Type @ to give them a Shout Out!',
   }),
+  editorResetter(),
 ];
 
 export const interactive = () => {
-  const [value, setValue] = useState(emptyValue);
+  const [value, setValue] = useState(EMPTY_VALUE);
 
   return (
     <div>
@@ -85,6 +88,18 @@ export const interactive = () => {
         autoFocus
         editableStyle={{ minHeight: 200 }}
       ></HeroEditor>
+
+      <Button
+        onClick={(event) => {
+          event.preventDefault();
+          window.postMessage({
+            type: '@hero-editor/interactive/reset',
+          });
+        }}
+      >
+        Reset
+      </Button>
+
       <JsonViewer value={value} />
     </div>
   );
@@ -173,17 +188,6 @@ const Button = (props) => (
     }}
   />
 );
-
-const emptyValue = [
-  {
-    type: 'paragraph',
-    children: [
-      {
-        text: '',
-      },
-    ],
-  },
-];
 
 const defaultValue = [
   {
